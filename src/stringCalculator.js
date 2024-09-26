@@ -6,7 +6,7 @@ function add(num) {
     if (!num.includes(','))
         return parseInt(num);
     var numArr = num.split(',').map(Number);
-    return numArr[0] + numArr[1];
+    return numArr.reduce(function (sum, num) { return sum + num; }, 0);
 }
 ;
 exports.default = add;
