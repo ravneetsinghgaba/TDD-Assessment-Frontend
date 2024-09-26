@@ -1,5 +1,7 @@
-function add (numbers: string): number | undefined {
-    if (numbers === '') return 0;
+function add (num: string): number | undefined {
+    if (num === '') return 0;
+
+    if(!num.includes(',')) return parseInt(num);
 
 };
 

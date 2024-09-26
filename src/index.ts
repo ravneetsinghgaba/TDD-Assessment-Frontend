@@ -1,4 +1,4 @@
 import add from "./stringCalculator";
 
-const result = add('');
+const result = add('1');
 console.log(result);
