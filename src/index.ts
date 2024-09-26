@@ -1,4 +1,4 @@
 import add from "./stringCalculator";
 
-const result = add('//;\n1;3');
+const result = add('1,-2,3');
 console.log(result);

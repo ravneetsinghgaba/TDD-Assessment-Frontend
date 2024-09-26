@@ -10,6 +10,10 @@ function add(num) {
         num = parts[1];
     }
     var numArr = num.split(ele).map(Number);
+    var negative = numArr.filter(function (num) { return num < 0; });
+    if (negative.length > 0) {
+        throw new Error("negative numbers not allowed: ".concat(negative.join(',')));
+    }
     return numArr.reduce(function (sum, num) { return sum + num; }, 0);
 }
 ;

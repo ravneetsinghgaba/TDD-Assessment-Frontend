@@ -23,3 +23,11 @@ test('return the sum of numbers with new lines', () => {
 test('adding support for delimiters', () => {
     expect(add('//;\n1;3')).toBe(4);
 })
+
+test('throws an error for negative numbers', () => {
+    expect(() => add('1,-2,3')).toThrow("negative numbers not allowed: -2");
+});
+  
+test('throws an error for multiple negative numbers', () => {
+    expect(() => add("1,-2,-3")).toThrow("negative numbers not allowed: -2,-3");
+});
