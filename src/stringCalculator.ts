@@ -1,9 +1,9 @@
 function add (num: string): number | undefined {
     if (num === '') return 0;
 
-    if(!num.includes(',')) return parseInt(num);
+    const ele = /,|\n/;
 
-    const numArr = num.split(',').map(Number);
+    const numArr = num.split(ele).map(Number);
     return numArr.reduce((sum, num) => sum + num, 0);
 
 };
