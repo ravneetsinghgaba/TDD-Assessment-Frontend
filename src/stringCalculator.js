@@ -5,6 +5,8 @@ function add(num) {
         return 0;
     if (!num.includes(','))
         return parseInt(num);
+    var numArr = num.split(',').map(Number);
+    return numArr[0] + numArr[1];
 }
 ;
 exports.default = add;
